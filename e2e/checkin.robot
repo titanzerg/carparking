@@ -1,8 +1,8 @@
 *** Settings ***
 Library   Selenium2Library
 
-Resource   ${EXECDIR}/e2e/resource/keyword.robot
-Resource   ${EXECDIR}/e2e/resource/variable.robot
+# Resource   ${EXECDIR}/e2e/resource/keyword.robot
+# Resource   ${EXECDIR}/e2e/resource/variable.robot
 Test Teardown      close browser
 
 *** Variables ***
