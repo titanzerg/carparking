@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import App from './App'
+import { shallow } from 'enzyme';
+// import CheckInPoup from './components/CheckinPopup'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+
+
+describe("render", () => {
+  it('App must complete render', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('#btnIn')).toHaveLength(1)
+  });
+
 });
