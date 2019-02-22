@@ -12,3 +12,13 @@ describe("render", () => {
   });
 
 });
+
+describe("event", () => {
+  it('btnIn Click', () => {
+    const wrapper = shallow(<App />);
+    const btnIn = wrapper.find('#btnIn');
+    const btnIn_clickfn = jest.fn();
+    btnIn.simulate('click');
+    expect(btnIn_clickfn).toHaveBeenCalledTimes(1)
+  })
+});
