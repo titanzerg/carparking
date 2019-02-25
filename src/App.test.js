@@ -17,8 +17,16 @@ describe("event", () => {
   it('btnIn Click', () => {
     const wrapper = shallow(<App />);
     const btnIn = wrapper.find('#btnIn');
-    const btnIn_clickfn = jest.fn();
+    wrapper.instance().btnIn_clickfn = jest.fn();
     btnIn.simulate('click');
-    expect(btnIn_clickfn).toHaveBeenCalledTimes(1)
+    expect(wrapper.instance().btnIn_clickfn).toHaveBeenCalledTimes(1)
   })
+});
+
+describe("method", ()=> {
+  it('btnIn_clickfn must change state for open dialog',()=>{
+    const wrapper = shallow(<App />);
+    wrapper.instance().btnIn_clickfn();
+    expect(wrapper.state('frmIn_visible')).toBe(true)
+  });
 });
