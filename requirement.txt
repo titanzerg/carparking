@@ -11,7 +11,7 @@ robotframework-selenium2library==3.0.0
 robotframework-seleniumlibrary==3.1.1
 selenium==3.14.1
 six==1.12.0
-urllib3==1.23
+urllib3==1.26.5
 Appium-Python-Client==0.38
 decorator==4.3.2
 docutils==0.14
@@ -27,4 +27,4 @@ robotframework-selenium2library==3.0.0
 robotframework-seleniumlibrary==3.1.1
 selenium==3.14.1
 six==1.12.0
-urllib3==1.23
+urllib3==1.26.5
